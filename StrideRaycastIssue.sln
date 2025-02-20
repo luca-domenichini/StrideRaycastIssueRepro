@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrideRaycastIssue.Windows", "StrideRaycastIssue.Windows\StrideRaycastIssue.Windows.csproj", "{CFF6CAB9-B0C9-47BF-858B-7A54F216AE31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrideRaycastIssue", "StrideRaycastIssue\StrideRaycastIssue.csproj", "{2B52F102-8B67-4B33-80FD-47DAC8EC4C7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFF6CAB9-B0C9-47BF-858B-7A54F216AE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF6CAB9-B0C9-47BF-858B-7A54F216AE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF6CAB9-B0C9-47BF-858B-7A54F216AE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF6CAB9-B0C9-47BF-858B-7A54F216AE31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B52F102-8B67-4B33-80FD-47DAC8EC4C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B52F102-8B67-4B33-80FD-47DAC8EC4C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B52F102-8B67-4B33-80FD-47DAC8EC4C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B52F102-8B67-4B33-80FD-47DAC8EC4C7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

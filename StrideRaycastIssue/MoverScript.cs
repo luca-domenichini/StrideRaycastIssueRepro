@@ -23,6 +23,7 @@ public class MoverScript : SyncScript
 
     public override void Update()
     {
+        // on left mouse click, move the sphere with BodyComponent to the mouse position
         if (Input.IsMouseButtonPressed(Stride.Input.MouseButton.Left))
         {
             var camera = this.SceneSystem.SceneInstance.RootScene.Entities.FirstOrDefault(x => x.Get<CameraComponent>() != null).Get<CameraComponent>();
@@ -43,6 +44,7 @@ public class MoverScript : SyncScript
             }
         }
 
+        // move spheres to random positions
         if (_targetPositionSphere1 == Vector3.Zero)
         {
             _targetPositionSphere1 = new Vector3((float)(Random.Shared.NextDouble() * 10 - 5), 0.5f, (float)(Random.Shared.NextDouble() * 10 - 5));
@@ -57,6 +59,7 @@ public class MoverScript : SyncScript
             _elapsed2 = TimeSpan.Zero;
         }
 
+        // update sphere positions
         _elapsed1 += Game.UpdateTime.Elapsed;
         if (_elapsed1 >= TranslationTime)
         {

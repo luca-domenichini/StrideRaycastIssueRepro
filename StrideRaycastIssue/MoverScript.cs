@@ -58,7 +58,7 @@ public class MoverScript : SyncScript
             _elapsed2 += Game.UpdateTime.Elapsed;
             if (_elapsed2 >= TranslationTime)
             {
-                Sphere2Body.Get<BodyComponent>().Position = _targetPositionSphere2;
+                bodyComponent.Position = _targetPositionSphere2;
                 _targetPositionSphere2 = Vector3.Zero;
             }
             else

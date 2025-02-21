@@ -61,17 +61,17 @@ public class BasicCameraController : SyncScript
         ProcessInput();
         UpdateTransform();
 
-        int y = 30;
+        int y = 600;
         foreach (var e in SceneSystem.SceneInstance.RootScene.Entities.Where(x => x.Name.StartsWith("Sphere")))
         {
             var body = e.Get<BodyComponent>();
             if (body is null)
-                DebugText.Print($"{e.Name} position: {e.Transform.Position}", new Int2(100, y));
+                DebugText.Print($"{e.Name} position: {e.Transform.Position}", new Int2(80, y));
             else
             {
-                DebugText.Print($"{e.Name} position: {e.Transform.Position}", new Int2(100, y));
+                DebugText.Print($"{e.Name} position: {e.Transform.Position}", new Int2(80, y));
                 y += 20;
-                DebugText.Print($"      Body position: {body.Position}", new Int2(100, y));
+                DebugText.Print($"      Body position: {body.Position}", new Int2(80, y));
             }
 
             y += 20;
@@ -84,11 +84,12 @@ public class BasicCameraController : SyncScript
 
         var backBuffer = GraphicsDevice.Presenter.BackBuffer;
         var viewPort = new Viewport(0, 0, backBuffer.Width, backBuffer.Height);
+
         var nearPosition = viewPort.Unproject(new Vector3(Input.AbsoluteMousePosition, 0), _camera.ProjectionMatrix, _camera.ViewMatrix, Matrix.Identity);
         var farPosition = viewPort.Unproject(new Vector3(Input.AbsoluteMousePosition, 1.0f), _camera.ProjectionMatrix, _camera.ViewMatrix, Matrix.Identity);
         if (simulation.RayCast(nearPosition, farPosition, 1000, out HitInfo hit))
         {
-            DebugText.Print($"Hovering on {hit.Collidable!.Entity.Name}", new Int2(100, 100));
+            DebugText.Print($"Hovering on {hit.Collidable!.Entity.Name}", new Int2(550, 120));
         }
     }
 

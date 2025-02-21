@@ -94,7 +94,7 @@ Hierarchy:
                         Id: 54268baf-b931-47cd-9cc3-0766e4a38d54
                         Sphere1Static: ref!! a0819736-af41-4672-8440-b02691ef8fee
                         Sphere2Body: ref!! 3a062883-171f-423a-8d31-9033c74cd258
-                        TranslationTime: 0:00:00:04.0000000
+                        TranslationTime: 0:00:00:02.0000000
                     c6b952d713e5683c70403914ec473fcd: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
                         Id: b2900b9e-0312-4b00-bd3a-c73ed91b4a3c
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics

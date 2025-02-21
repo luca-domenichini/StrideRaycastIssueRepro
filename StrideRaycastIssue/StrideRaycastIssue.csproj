@@ -4,6 +4,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Stride.BepuPhysics" Version="4.2.0.2293" />
+    <PackageReference Include="Stride.CommunityToolkit.Bepu" Version="1.0.0-preview.53" />
     <PackageReference Include="Stride.Engine" Version="4.2.0.2293" />
     <PackageReference Include="Stride.Video" Version="4.2.0.2293" />
     <PackageReference Include="Stride.Physics" Version="4.2.0.2293" />

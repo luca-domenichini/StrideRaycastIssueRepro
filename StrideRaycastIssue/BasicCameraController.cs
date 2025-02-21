@@ -1,4 +1,5 @@
 ﻿using Stride.BepuPhysics;
+using Stride.CommunityToolkit.Bepu;
 using Stride.Core;
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -90,6 +91,11 @@ public class BasicCameraController : SyncScript
         if (simulation.RayCast(nearPosition, farPosition, 1000, out HitInfo hit))
         {
             DebugText.Print($"Hovering on {hit.Collidable!.Entity.Name}", new Int2(550, 120));
+        }
+
+        if (_camera.RaycastMouse(this, 1000, out hit))
+        {
+            DebugText.Print($"Hovering on {hit.Collidable!.Entity.Name} by @VaclavElias", new Int2(550, 140));
         }
     }
 

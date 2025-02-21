@@ -71,7 +71,7 @@ Hierarchy:
                         CollisionGroup: {}
                         ContactEventHandler: null
                         Kinematic: true
-                        Gravity: true
+                        Gravity: false
                         InterpolationMode: None
                         ContinuousDetectionMode: Discrete
                         SleepThreshold: 0.01

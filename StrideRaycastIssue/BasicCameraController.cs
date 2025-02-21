@@ -73,6 +73,8 @@ public class BasicCameraController : SyncScript
                 DebugText.Print($"{e.Name} position: {e.Transform.Position}", new Int2(80, y));
                 y += 20;
                 DebugText.Print($"      Body position: {body.Position}", new Int2(80, y));
+                y += 20;
+                DebugText.Print($"      Body awakened: {body.Awake}", new Int2(80, y));
             }
 
             y += 20;

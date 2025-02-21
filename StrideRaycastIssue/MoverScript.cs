@@ -55,6 +55,9 @@ public class MoverScript : SyncScript
         {
             var bodyComponent = Sphere2Body.Get<BodyComponent>();
 
+            // Awake body component while moving. This flag will reset to false when body finishes moving.
+            bodyComponent.Awake = true;
+
             _elapsed2 += Game.UpdateTime.Elapsed;
             if (_elapsed2 >= TranslationTime)
             {
@@ -63,13 +66,6 @@ public class MoverScript : SyncScript
             }
             else
             {
-                // maybe this is the issue? how to correctly move a BodyComponent?
-                // Do I need to set the linear-velocity instead? like this?
-                ////var currentPosition = bodyComponent.Position;
-                ////var direction = Vector3.Normalize(_targetPositionSphere2 - currentPosition);
-                ////var distance = Vector3.Distance(currentPosition, _targetPositionSphere2);
-                ////var velocity = direction * distance / (float)TranslationTime.TotalSeconds;
-                ////bodyComponent.LinearVelocity = velocity;
                 bodyComponent.Position = Vector3.Lerp(_startPositionSphere2, _targetPositionSphere2, (float)(_elapsed2 / TranslationTime));
             }
         }
